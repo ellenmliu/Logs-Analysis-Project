@@ -25,6 +25,15 @@ You need the virtual machine, pythong and Vagrant installed onto your computer. 
 you would connect to the database and load the data from the `newsdata.sql`. Once the data is
 loaded you may be able to move on to the next step.
 
+Once everything is ready, you need to run the next three to make the three views in the psql command.
+
+`create view articleslogauthors as select author, title, slug, path, status, to_char(log.time, 'FMMonth FMDDth, YYYY') as logdate,name from articles, log, authors where articles.slug = (regexp_split_to_array(path, E'/article/'))[2] and articles.author = authors.id;`
+
+`create view errorsperday as select to_char(log.time, 'FMMonth FMDDth, YYYY') as logdate, count(log.time) as errors from log where log.status = '404 NOT FOUND' group by logdate;`
+
+`create view totalperday as select to_char(log.time, 'FMMonth FMDDth, YYYY') as logdate, count(log.time) as totalvisits from log group by logdate;`
+
+
 ## To use
 Download the zip file and unzip the file. Then open up terminal and `cd` to the vagrant folder.
 Bring the virtual machine online and log in. Then `cd` to the database folder where `newsdb.py`
