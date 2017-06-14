@@ -1,7 +1,7 @@
 # `README` for Movie Trailer Project
 
 Author: Ellen Liu
-Last Edit: 6/11/2017
+Last Edit: 6/13/2017
 
 Used PostgreSQL to report 3 questions:
     1) What are the most popular three articles of all time?
