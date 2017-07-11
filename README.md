@@ -1,4 +1,4 @@
-# `README` for Movie Trailer Project
+# `README` for Logs Analysis Project
 
 Author: Ellen Liu
 Last Edit: 6/13/2017
