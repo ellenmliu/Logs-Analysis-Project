@@ -21,7 +21,7 @@ I used this so I can calculate the percentage and display which date(s) had more
 requests lead to errors.
 
 ## Requirements
-You need the virtual machine, pythong and Vagrant installed onto your computer. Once it's installed
+You need the virtual machine, python and Vagrant installed onto your computer. Once it's installed
 you would connect to the database and load the data from the `newsdata.sql`. Once the data is
 loaded you may be able to move on to the next step.
 
